@@ -1,0 +1,18 @@
+.footer-area{
+    background-color: #3C444C;
+    font-family: Montserrat;
+}
+h6{
+    text-align: justify;
+    padding-top: 20px;
+    color: white;
+}
+h3{
+    color : white;
+}
+p{
+    color : white;
+}
+/* p:hover{
+    color: blue;
+} */

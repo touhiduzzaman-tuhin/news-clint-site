@@ -1,24 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AddFakeData from "./components/AddFakeData/AddFakeData";
+import CreateNews from "./components/CreateNews/CreateNews";
+import Header from "./components/Header/Header";
+import About from "./components/HeaderComponent/About";
+import Blog from "./components/HeaderComponent/Blog";
+import Contact from "./components/HeaderComponent/Contact";
+import Work from "./components/HeaderComponent/Work";
+import Home from "./components/Home/Home";
+import NotFound from "./components/NotFound/NotFound";
+import SingleNews from "./components/SingleNews/SingleNews";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header></Header>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path='/home'>
+          <Home></Home>
+        </Route>
+        <Route path='/work'>
+          <Work></Work>
+        </Route>
+        <Route path='/about'>
+          <About></About>
+        </Route>
+        <Route path='/blog'>
+          <Blog></Blog>
+        </Route>
+        <Route path='/addFakeData'>
+          <AddFakeData></AddFakeData>
+        </Route>
+        <Route path='/createNews'>
+          <CreateNews></CreateNews>
+        </Route>
+        <Route path='/news/:id'>
+          <SingleNews></SingleNews>
+        </Route>
+        <Route path='/contact'>
+          <Contact></Contact>
+        </Route>
+        <Route path='*'>
+          <NotFound></NotFound>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
