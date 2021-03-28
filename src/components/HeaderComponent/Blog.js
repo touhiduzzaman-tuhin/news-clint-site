@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='container' align='center'>
-            <h3 className='my-5'>Blog Page Coming Soon...</h3>
+            <h2 className='my-5'>Blog Page Coming Soon...</h2>
         </div>
     );
 };

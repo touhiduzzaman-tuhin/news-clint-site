@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddFakeData from "./components/AddFakeData/AddFakeData";
 import CreateNews from "./components/CreateNews/CreateNews";
+import EditNews from "./components/EditNews/EditNews";
 import Header from "./components/Header/Header";
 import About from "./components/HeaderComponent/About";
 import Blog from "./components/HeaderComponent/Blog";
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route path='/createNews'>
           <CreateNews></CreateNews>
+        </Route>
+        <Route path='/editNews/:id'>
+          <EditNews></EditNews>
         </Route>
         <Route path='/news/:id'>
           <SingleNews></SingleNews>
