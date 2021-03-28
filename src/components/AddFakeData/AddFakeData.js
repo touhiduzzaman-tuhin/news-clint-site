@@ -7,7 +7,7 @@ const AddFakeData = () => {
     const history = useHistory();
 
     const handleAddFakeNews = () => {
-        fetch('http://localhost:5000/addFakeNews', {
+        fetch('https://gentle-escarpment-34687.herokuapp.com/addFakeNews', {
             method : 'POST',
             headers : {'Content-Type' : 'application/json'},
             body : JSON.stringify(newsData)

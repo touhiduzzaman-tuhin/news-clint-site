@@ -36,7 +36,7 @@ const CreateNews = () => {
 
     const handleCreateNews = (event) => {
         event.preventDefault();
-        fetch('http://localhost:5000/addSingleNews', {
+        fetch('https://gentle-escarpment-34687.herokuapp.com/addSingleNews', {
             method : 'POST',
             headers : {'Content-Type' : 'application/json'},
             body : JSON.stringify(newsData)

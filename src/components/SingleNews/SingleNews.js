@@ -12,7 +12,7 @@ const SingleNews = () => {
     // console.log(id);
     const [singleNews, setSingleNews] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/news/${id}`)
+        fetch(`https://gentle-escarpment-34687.herokuapp.com/news/${id}`)
             .then(response => response.json())
             .then(data => {
                 console.log(data[0]);
@@ -31,7 +31,7 @@ const SingleNews = () => {
     const handleDeleteNews = (event, id) => {
         // console.log('Delete Click');
         console.log(id);
-        fetch(`http://localhost:5000/deleteNews/${id}`, {
+        fetch(`https://gentle-escarpment-34687.herokuapp.com/deleteNews/${id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())

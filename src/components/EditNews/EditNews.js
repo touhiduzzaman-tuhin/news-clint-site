@@ -15,7 +15,7 @@ const EditNews = () => {
     });
 
     useEffect(() => {
-        fetch(`http://localhost:5000/editNews/${id}`)
+        fetch(`https://gentle-escarpment-34687.herokuapp.com/editNews/${id}`)
             .then(response => response.json())
             .then(data => {
                 console.log(data[0]);
@@ -54,7 +54,7 @@ const EditNews = () => {
     const handleUpdateNews = (event, id) => {
         event.preventDefault();
 
-        fetch(`http://localhost:5000/updateNews/${id}`, {
+        fetch(`https://gentle-escarpment-34687.herokuapp.com/updateNews/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newsDetails)
